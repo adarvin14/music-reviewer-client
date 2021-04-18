@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { addBlog } from '../actions';
+import { addReview } from '../actions';
 
 class Form extends Component {
   state = {
@@ -18,7 +18,7 @@ class Form extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.addBlog(this.state, this.props.history);
+    this.props.addReview(this.state, this.props.history);
   }
 
   render() {
@@ -48,4 +48,4 @@ class Form extends Component {
   }
 }
 
-export default connect(null, { addBlog })(Form)
+export default connect(null, { addReview })(Form)
