@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
 //import { connect } from 'react-redux'
-//import { deleteReview } from '../actions/index'
+import { deleteReview } from '../actions/index'
 
 class Review extends Component {
+
+  handleDelete = (event) => {
+    this.props.removeRecipe(this.props.review.id);
+    this.props.history.push("/");
+  }
+
   render() {
     const { artist, album, content } = this.props;
     return (
       <div>
         <h3>{ album }: { artist }</h3>
         <p> { content }</p>
-        <button>Edit</button>
-        <button>Delete Review</button>
+        <button className="button" onClick={this.handleDelete}>Delete Review</button>
       </div>
     )
   }
