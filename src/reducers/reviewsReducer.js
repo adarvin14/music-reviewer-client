@@ -16,13 +16,23 @@ const reviewsReducer = (state=initialState, action) => {
         loading: false,
         reviews: action.reviews
       }
-  case "ADD_REVIEW":
-    return {
-      ...state,
-      reviews: [...state.reviews, action.review]
-  }
+    case "ADD_REVIEW":
+      return {
+        ...state,
+        reviews: [...state.reviews, action.review]
+    }
+    case "DELETE_REVIEW":
+      return {
+        ...state,
+        reviews: [...state.reviews, action.review]
+    }
+    case "DELETE_REVIEW":
+      return {
+        ...state,
+        reviews: [...state.reviews, action.review]
+    }
   default:
-      return state
+    return state
   }
 }
   

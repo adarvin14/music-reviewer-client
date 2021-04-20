@@ -5,8 +5,7 @@ class Review extends Component {
     const { artist, album, content } = this.props;
     return (
       <div>
-        <h3>{ artist }</h3>
-        <h3>{ album }</h3>
+        <h3>{ album }: { artist }</h3>
         <p> { content }</p>
       </div>
     )

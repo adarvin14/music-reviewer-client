@@ -5,6 +5,8 @@ class Home extends Component {
     return (
       <div className="App">
         <h1>Welcome To Music Reviewer!</h1>
+
+        <p>Use the Navigation Bar at the top to begin creating your reviews!</p>
       </div>
     )
   }

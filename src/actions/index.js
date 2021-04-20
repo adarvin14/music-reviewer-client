@@ -24,3 +24,39 @@ export const addReview = (review, history) => {
             })
     }
 }
+
+export const deleteReview = (review, history) => {
+    return dispatch => {
+        fetch('http://localhost:3001/reviews', {
+            method: "DELETE",
+            headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ review })
+        })
+            .then(resp => resp.json())
+            .then(review => {
+                dispatch({ type: "DELETE_REVIEW", review })
+                history.push("/reviews")
+            })
+    }
+}
+
+export const editReview = (review, history) => {
+    return dispatch => {
+        fetch('http://localhost:3001/reviews', {
+            method: "UPDATE",
+            headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ review })
+        })
+            .then(resp => resp.json())
+            .then(review => {
+                dispatch({ type: "EDIT_REVIEW", review })
+                history.push("/reviews")
+            })
+    }
+}

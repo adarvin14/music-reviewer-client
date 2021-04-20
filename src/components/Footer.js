@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     return (
       <div>
-        	Footer
+        	This web application was designed by Alex Darvin.  If you have any questions, reach out to amdarvin14@gmail.com
       </div>
     )
   }
