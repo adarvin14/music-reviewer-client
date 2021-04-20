@@ -37,7 +37,7 @@ class Form extends Component {
           </div>
           <br />
           <div>
-            <p><label htmlFor="content">Content</label></p>
+            <p><label htmlFor="content">Review</label></p>
             <textarea id="content" name="content" value={ this.state.content } onChange={ this.handleChange }></textarea>
           </div>
           <br />

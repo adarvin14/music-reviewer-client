@@ -17,12 +17,6 @@ class App extends Component {
   }
 
   render() {
-    if (this.props.loading) {
-      return (
-        <h3>Loading...</h3>
-      )
-    }
-
     return (
       <Router>
         <Nav />
@@ -45,4 +39,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { getreviews })(App);
+export default connect(mapStateToProps, { getReviews })(App);

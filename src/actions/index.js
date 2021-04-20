@@ -7,7 +7,7 @@ export const getReviews = () => {
     }
 }
   
-  export const addReview = (review, history) => {
+export const addReview = (review, history) => {
     return dispatch => {
         fetch('http://localhost:3001/reviews', {
             method: "POST",
@@ -19,8 +19,8 @@ export const getReviews = () => {
         })
             .then(resp => resp.json())
             .then(review => {
-            dispatch({ type: "ADD_REVIEW", review })
-            history.push("/reviews")
+                dispatch({ type: "ADD_REVIEW", review })
+                history.push("/reviews")
             })
     }
 }
