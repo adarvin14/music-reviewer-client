@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-//import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 import { deleteReview } from '../actions/index'
 
 class Review extends Component {
 
   handleDelete = (event) => {
-    this.props.removeRecipe(this.props.review.id);
+    this.props.deleteReview(this.props.review.id);
     this.props.history.push("/");
   }
 
