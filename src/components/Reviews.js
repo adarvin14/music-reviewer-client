@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Review from './Review';
 
-class Index extends Component {
+class Reviews extends Component {
   render() {
     const reviews = this.props.reviews.map( (review, i) => <Review key={i} artist={ review.artist } album={review.album} content={ review.content } />)
 
@@ -20,4 +20,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Index);
+export default connect(mapStateToProps)(Review);

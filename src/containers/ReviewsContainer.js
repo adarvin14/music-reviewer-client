@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Reviews from '../components/Index';
+import Reviews from '../components/Reviews';
 
 import Container from 'react-bootstrap/Container';
 

@@ -6,7 +6,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
-import Index from './components/Index';
+import Reviews from './components/Reviews';
 import ErrorPage from './components/Error';
 import Form from './components/Form';
 
@@ -23,7 +23,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={ Home } />
           <Route exact path="/about" component={ About } />
-          <Route exact path="/reviews" component={ Index } />
+          <Route exact path="/reviews" component={ Reviews } />
           <Route exact path="/reviews/new" component={ Form } />
           <Route component={ErrorPage} />
         </Switch>

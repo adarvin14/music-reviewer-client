@@ -6,7 +6,10 @@ This is a web application that allows you to review albums using a React-Redux f
 # To run this application:
 run npm start to load the application in your web browser
 
-run rails s in the api to connect the application to the backend
+Before starting your server on the backend:
+run rails db:migrate
+
+then run: rails s in the terminal to connect the application to the backend
 
 https://github.com/adarvin14/music-reviewer-api
 
