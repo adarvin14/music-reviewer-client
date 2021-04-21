@@ -19,6 +19,7 @@ class Form extends Component {
     e.preventDefault();
     
     this.props.addReview(this.state, this.props.history);
+    console.log(this.props)
   }
 
   render() {

@@ -20,12 +20,16 @@ const reviewsReducer = (state=initialState, action) => {
       return {
         ...state,
         reviews: [...state.reviews, action.review]
-    }
+      }
     case "DELETE_REVIEW":
-      return {
-        ...state,
-        reviews: [...state.reviews, action.review]
-    }
+      let deleteReview = state.reviews.map(review => {
+        if (review.id === action.payload.id) {
+        return action.payload
+        } else {
+        return review
+        }
+    })
+    return {...state, reviews: deleteReview}
     case "EDIT_REVIEW":
       let reviewEdit = state.reviews.map(review => {
         if (review.id === action.payload.id) {

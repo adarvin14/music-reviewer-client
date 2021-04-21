@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { deleteReview } from '../actions/index'
+import { deleteReview } from '../actions'
 
 class Review extends Component {
 
   handleDelete = (event) => {
-    this.props.deleteReview(this.props.review.id);
+    console.log(this.props)
+    this.props.deleteReview(this.props.id);
     this.props.history.push("/");
   }
 
@@ -13,7 +14,7 @@ class Review extends Component {
     const { artist, album, content } = this.props;
     return (
       <div>
-        <h3>{ album }: { artist }</h3>
+        <h3>{ artist }: { album }</h3>
         <p> { content }</p>
         <button className="button" onClick={this.handleDelete}>Delete Review</button>
       </div>
@@ -21,6 +22,5 @@ class Review extends Component {
   }
 }
 
-//add edit button at the end of each review that redirects to form page
 //add delete button that effectively destroys the selected review
-export default Review
+export default connect(null, { deleteReview })(Review)

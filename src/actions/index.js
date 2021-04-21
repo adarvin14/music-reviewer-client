@@ -37,7 +37,7 @@ export const deleteReview = (review, history) => {
         })
             .then(resp => resp.json())
             .then(review => {
-                dispatch({ type: "DELETE_REVIEW", review })
+                dispatch({ type: "DELETE_REVIEWS", review })
                 history.push("/reviews")
             })
     }
