@@ -91,20 +91,20 @@ export const addAlbum = (album, history) => {
     }
 }
 
-// export const deleteReview = (review, history) => {
-//     return dispatch => {
-//         fetch('http://localhost:3001/reviews', {
-//             method: "DELETE",
-//             headers: {
-//             "Accept": "application/json",
-//             "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify({ review })
-//         })
-//             .then(resp => resp.json())
-//             .then(review => {
-//                 dispatch({ type: "DELETE_REVIEWS", review })
-//                 history.push("/reviews")
-//             })
-//     }
-// }
+export const deleteAlbum = (album, history) => {
+    return dispatch => {
+        fetch('http://localhost:3001/albums', {
+            method: "DELETE",
+            headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ album })
+        })
+            .then(resp => resp.json())
+            .then(album => {
+                dispatch({ type: "DELETE_ALBUMS", album })
+                history.push("/albums")
+            })
+    }
+}
