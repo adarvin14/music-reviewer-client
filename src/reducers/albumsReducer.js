@@ -29,7 +29,7 @@ const albumsReducer = (state=initialState, action) => {
             return album
             }
         })
-        return {...state, albums: deleteALBUM}
+        return {...state, albums: deleteAlbum}
         case "EDIT_ALBUM":
             let albumEdit = state.albums.map(album => {
                 if (album.id === action.payload.id) {

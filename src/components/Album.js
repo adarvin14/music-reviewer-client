@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 
 class Album extends Component {
 
   render() {
-    const { title } = this.props;
+    const { title, artist, release_year } = this.props.album;
     return (
       <div>
         <h3>{ title }</h3>
-        <p> { this.review }</p>
         
       </div>
     )

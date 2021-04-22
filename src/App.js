@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { getReviews } from './actions';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import About from './components/About';
 import Reviews from './components/Reviews';
+import Albums from './components/Albums';
 import ErrorPage from './components/Error';
-import Form from './components/Form';
+import ReviewForm from './components/ReviewForm';
+import AlbumForm from './components/AlbumForm';
 
 class App extends Component {
-
-  componentDidMount() {
-    this.props.getReviews();
-  }
 
   render() {
     return (
@@ -22,9 +18,11 @@ class App extends Component {
         <Nav />
         <Switch>
           <Route exact path="/" component={ Home } />
-          <Route exact path="/about" component={ About } />
+          <Route path="/about" component={ About } />
+          <Route exact path="/albums" component={ Albums } />
+          <Route exact path="/albums/new" component={ AlbumForm } />
           <Route exact path="/reviews" component={ Reviews } />
-          <Route exact path="/reviews/new" component={ Form } />
+          <Route exact path="/reviews/new" component={ ReviewForm } />
           <Route component={ErrorPage} />
         </Switch>
         <Footer />
@@ -33,10 +31,4 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    loading: state.loading
-  }
-}
-
-export default connect(mapStateToProps, { getReviews })(App);
+export default App;

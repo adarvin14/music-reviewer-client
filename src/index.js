@@ -5,10 +5,10 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import reviewsReducer from './reducers/reviewsReducer';
+import rootReducer from './reducers';
 
 
-const store = createStore(reviewsReducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>

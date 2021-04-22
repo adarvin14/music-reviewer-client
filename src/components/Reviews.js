@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import Review from './Review';
+import { getReviews } from '../actions';
 
 class Reviews extends Component {
+
+  componentDidMount() {
+    this.props.getReviews();
+  }
+
   render() {
-    const reviews = this.props.reviews.map( (review, i) => <Review key={i} artist={ review.artist } album={review.album} content={ review.content } />)
+    const reviews = this.props.reviews.map((review, i) => <Review key={i} review={review} />)
 
     return (
       <div>
-        { reviews }
+        { reviews}
       </div>
     )
   }
@@ -16,8 +22,8 @@ class Reviews extends Component {
 
 const mapStateToProps = state => {
   return {
-    reviews: state.reviews
+    reviews: state.review.reviews
   }
 }
 
-export default connect(mapStateToProps)(Review);
+export default connect(mapStateToProps, { getReviews })(Reviews);
