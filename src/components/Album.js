@@ -6,7 +6,8 @@ class Album extends Component {
     const { title, artist, release_year } = this.props.album;
     return (
       <div>
-        <h3>{ title }</h3>
+        <h3>{ title } - { artist }: { release_year }</h3>
+
         
       </div>
     )
