@@ -38,7 +38,7 @@ class Form extends Component {
                     </div>
                     <br />
                     <div>
-                        <p><label htmlFor="release_year">Year</label></p>
+                        <p><label htmlFor="release_year">Release Year</label></p>
                         <input type="number" id="release_year" name="release_year" value={release_year} onChange={this.handleChange} />
                     </div>
                     <br />

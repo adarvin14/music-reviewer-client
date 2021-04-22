@@ -19,7 +19,7 @@ export const addReview = (review, history) => {
         })
             .then(resp => resp.json())
             .then(review => {
-                console.log('review==>>', review);
+                console.log(review);
                 dispatch({ type: "ADD_REVIEW", review })
                 history.push("/reviews")
             }).catch(err => {

@@ -14,11 +14,12 @@ class Album extends Component {
             <div>
                 <h3>{title} - {artist}: {release_year}</h3>
                 {/* <button className="button" onClick={this.handleDeleteAlbum}>Delete Album</button> */}
+                ____________________________________________
             </div>
         )
     }
 }
 
-//add edit button at the end of each review that redirects to form page
+//add edit button at the end of each album that redirects to form page
 
 export default Album

@@ -4,7 +4,7 @@ import { deleteReview } from '../actions'
 
 class Review extends Component {
 
-  // handleDelete = (event) => {
+  // handleDelete = () => {
   //   this.props.deleteReview(this.state, this.props.history);
   // }
 
@@ -12,10 +12,10 @@ class Review extends Component {
     const { content, album } = this.props.review;
     return (
       <div>
-        <h3>{album.artist}</h3>
-        <h3>{album.title}</h3>
+        <h3>{album.artist}: {album.title}</h3>
         <p> { content } </p>
         {/* <button className="button" onClick={this.handleDelete}>Delete Review</button> */}
+        ____________________________________________
       </div>
     )
   }
