@@ -25,7 +25,7 @@ class Form extends Component {
         const { title, release_year, artist } = this.state;
         return (
             <div>
-                <h3>Create Review</h3>
+                <h3>Create An Album You Would Like To Review!</h3>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <p><label htmlFor="title">Title</label></p>
@@ -42,7 +42,7 @@ class Form extends Component {
                         <input type="number" id="release_year" name="release_year" value={release_year} onChange={this.handleChange} />
                     </div>
                     <br />
-                    <input type="submit" value="Create Review" />
+                    <input type="submit" value="Create Album" />
                 </form>
             </div>
         )

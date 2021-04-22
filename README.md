@@ -9,7 +9,7 @@ run npm start to load the application in your web browser
 Before starting your server on the backend:
 run rails db:migrate
 
-then run: rails s in the terminal to connect the application to the backend
+then run: rails s in the terminal to connect the application to the backend:
 
 https://github.com/adarvin14/music-reviewer-api
 

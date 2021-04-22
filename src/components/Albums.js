@@ -15,6 +15,7 @@ class Albums extends Component {
         return (
             <div>
                 { albums}
+                ____________________________________________
             </div>
         )
     }
