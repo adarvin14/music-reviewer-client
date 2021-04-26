@@ -20,6 +20,6 @@ class Album extends Component {
     }
 }
 
-//add edit button at the end of each album that redirects to form page
+//add delete button at the end of each album that effectively deletes selected album and re-renders page
 
 export default Album
