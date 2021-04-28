@@ -3,13 +3,14 @@ import React, { Component } from 'react'
 class Button extends Component {
 
     state = {
-        count: 0
+        count: 0,
+        text: ""
     }
 
     increaseCount = () => {
-        let newCount = this.state.count + 1
         this.setState({
-            count: newCount
+            count: this.state.count + this.state.text.length,
+            text: ""
         })
     }
 
@@ -20,7 +21,7 @@ class Button extends Component {
         <div>
             {/* keep track of the number of characters in the text box */}
             {/* update state whenever text is changed so that the button adds the correct # of char */}
-                <input type="text" onClick={this.increaseCount} />
+                <input type="text" value={this.state.text} onChange={e => this.setState({text: e.target.value})} />
 
                 <button type="submit" onClick= {this.increaseCount}> Count!: {this.state.count} </button>
         </div>
