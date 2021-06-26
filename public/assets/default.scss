@@ -1,0 +1,12 @@
+header {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: $black;
+    color: $white;
+
+    nav {
+        position: absolute;
+        top: 50%; right: 50px
+    }
+}
